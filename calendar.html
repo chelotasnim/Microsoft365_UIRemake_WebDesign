@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft | Kalender Evo</title>
+    <link rel="stylesheet" href="plugins/evo-calendar/css/evo-calendar.min.css">
+    <link rel="stylesheet" href="plugins/evo-calendar/css/evo-calendar.midnight-blue.css">
+    <link rel="stylesheet" href="plugins/evo-calendar/css/evo-calendar.orange-coral.min.css">
+    <link rel="stylesheet" href="plugins/evo-calendar/css/evo-calendar.royal-navy.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-dark">
+    <nav>
+        <a href="index.html" class="nav-label">
+            <div class="comp-logo">
+                <div>
+                    <img src="assets/msofficelogo.png" draggable="false" />
+                </div>
+            </div>
+            <div class="product-label">
+                Microsoft 365
+            </div>
+        </a>
+        <div class="nav-link">
+            <a href="index.html#product">Produk</a>
+            <a href="index.html#keunggulan">Keunggulan</a>
+            <a href="index.html#user">Pengguna</a>
+            <a style="color: rgb(150, 150, 150);" href="calendar.html">Kalender</a>
+        </div>
+        <div class="nav-comp">
+            <div class="btn-group">
+                <div class="btn">Coba Gratis</div>
+                <div class="btn on">Masuk</div>
+            </div>
+        </div>
+        <div class="nav-toggle">
+            <ion-icon name="ellipsis-vertical-sharp"></ion-icon>
+        </div>
+    </nav>
+
+    <section>
+        <div class="content-container">
+            <div class="change-theme-wrapper">
+                <div style="color: rgb(150, 150, 150);">Pilih Tema Kalender : </div>
+                <div class="theme-box" data-class_theme="default" data-theme="Default">
+                    Default
+                </div>
+                <div class="theme-box" data-class_theme="midnight-blue" data-theme="Midnight Blue">
+                    Midnight Blue
+                </div>
+                <div class="theme-box" data-class_theme="royal-navy" data-theme="Royal Navy">
+                    Royal Navi
+                </div>
+                <div class="theme-box active orange-coral" data-class_theme="orange-coral" data-theme="Orange Coral">
+                    Orange Coral
+                </div>
+            </div>
+            <div class="calendar"></div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="plugins/jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="plugins/evo-calendar/js/evo-calendar.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

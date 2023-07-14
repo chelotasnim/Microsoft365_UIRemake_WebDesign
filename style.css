@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+.change-theme-wrapper {
+    position: fixed;
+    display: flex;
+    top: 73.5px;
+    padding: 14px;
+    padding-left: 72px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    z-index: 100;
+    gap: 32px;
+    font-size: 14px;
+}
+
+.theme-box {
+    border: none;
+    cursor: pointer;
+}
+
+.theme-box.orange-coral {
+    color: rgb(255, 75, 25);
+}
+
+.theme-box.default {
+    color: rgb(150, 100, 255);
+}
+
+.theme-box.midnight-blue {
+    color: rgb(0, 180, 180);
+}
+
+.theme-box.royal-navy {
+    color: rgb(0, 100, 125);
+}
+
+.calendar {
+    width: 100%;
+    min-height: calc(100vh - 200px);
+    margin-top: 120px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    padding-bottom: 24px;
+    padding-left: 72px;
+    align-items: center;
+    gap: 48px;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(225, 225, 225);
+    z-index: 1000;
+}
+
+.nav-label {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.nav-label img {
+    width: 125px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.comp-logo {
+    padding-right: 16px;
+    border-right: 2px solid rgb(0, 0, 0);
+}
+
+.product-label {
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 16px;
+}
+
+.nav-link {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link a {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.nav-link a:hover {
+    color: rgb(150, 150, 150);
+}
+
+.nav-comp {
+    position: absolute;
+    top: 16px;
+    right: 32px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover {
+    background: rgb(60, 60, 60);
+    color: rgb(255, 255, 255);
+}
+
+.btn.on {
+    background: rgb(60, 60, 60);
+    color: rgb(255, 255, 255);
+}
+
+.btn.on:hover {
+    background: rgb(40, 40, 40);
+}
+
+.navbar-extra {
+    position: fixed;
+    display: flex;
+    top: 73.5px;
+    left: 0;
+    width: 100%;
+    padding: 14px 0;
+    padding-left: 72px;
+    align-items: center;
+    gap: 32px;
+    font-weight: 500;
+    font-size: 13px;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+}
+
+.page {
+    position: relative;
+}
+
+.full-page {
+    min-height: 100vh;
+}
+
+.page.home {
+    display: flex;
+    padding-top: 64px;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1 {
+    line-height: 100px;
+    font-size: 100px;
+    color: rgb(60, 60, 60);
+}
+
+.home h1 span {
+    color: rgb(150, 150, 150);
+}
+
+.home .image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.home .content p {
+    margin-top: 32px;
+    max-width: 650px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+}
+
+.content-footer {
+    margin-top: 32px;
+}
+
+.content-footer span {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+    color: rgb(255, 75, 25);
+}
+
+.content-footer span ion-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.page.product {
+    display: flex;
+    padding: 100px 0 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.semantic-bg {
+    width: 85%;
+    height: max-content;
+    border-radius: 25px;
+    padding: 40px 48px;
+    border-bottom-left-radius: 150px;
+    background: linear-gradient(to left top, rgb(214, 78, 140), rgb(220, 21, 28), rgb(255, 145, 1));
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+
+.semantic-bg p {
+    margin-top: 8px;
+}
+
+.semantic-bg .card-container {
+    display: flex;
+    width: 100%;
+    transform: translateY(48px) translateX(24px);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.semantic-bg .card-container .card {
+    min-width: 275px;
+    flex: 1;
+    min-height: max-content;
+    padding: 24px 30px;
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .1);
+    transition: .2s;
+}
+
+.semantic-bg .card-container .card:hover {
+    transform: translateY(-12px);
+}
+
+.semantic-bg .card-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+}
+
+.semantic-bg .card-header img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+}
+
+.semantic-bg .card-content p {
+    padding-top: 5px;
+    line-height: 20px;
+    font-size: 13px;
+    color: rgb(100, 100, 100);
+}
+
+.page.keunggulan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    position: absolute;
+    display: flex;
+    width: 85%;
+    height: 75%;
+    border-radius: 8px;
+    background: rgb(60, 60, 60);
+}
+
+.banner-content {
+    flex: 2;
+    padding: 32px 48px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-content h1 {
+    margin-top: 32px;
+    font-size: 48px;
+}
+
+.banner-content h1 span {
+    color: rgb(150, 150, 150);
+}
+
+.banner-content h1 span span {
+    color: rgb(255, 75, 25);
+}
+
+.banner-content p {
+    line-height: 24px;
+    margin-top: 24px;
+}
+
+.banner-image {
+    display: flex;
+    flex: 1;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    animation: lamp 1.5s linear infinite;
+}
+
+.banner-content ul {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.banner-content ul li {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+    gap: 8px;
+}
+
+.banner-content ul li ion-icon {
+    width: 25px;
+    height: 25px;
+    color: rgb(150, 150, 150);
+}
+
+.btn.revert {
+    margin-top: 24px;
+    width: max-content;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.btn.revert:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(60, 60, 60);
+}
+
+@keyframes lamp {
+
+    0%,
+    90% {
+        filter: brightness(.8);
+    }
+
+    91%,
+    100% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, .6)) brightness(1);
+    }
+}
+
+.pengguna {
+    padding: 72px 100px;
+}
+
+.header-pengguna {
+    font-size: 24px;
+}
+
+.container-pengguna {
+    display: flex;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.card-pengguna {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    justify-content: space-between;
+    flex: 1;
+    padding: 24px 32px;
+    border-radius: 12px;
+    gap: 64px;
+    background: rgb(255, 75, 25);
+    color: rgb(255, 255, 255);
+}
+
+.card-pengguna:nth-child(even) {
+    background: rgb(60, 60, 60);
+}
+
+.card-pengguna .header-card {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.card-pengguna .header-card ion-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.card-pengguna .content-pengguna p {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.card-pengguna .content-pengguna span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.result-title {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, .8);
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.result-data {
+    display: flex;
+    padding-top: 14px;
+    gap: 72px;
+}
+
+.result-data h1 {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.result-data p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.uhf {
+    padding: 48px 72px 32px;
+    background: rgb(245, 245, 245);
+}
+
+.uhf ul {
+    list-style: none;
+}
+
+.uhf ul li {
+    margin-top: 16px;
+}
+
+.uhf ul li a {
+    font-size: 12px;
+    color: rgb(70, 70, 70);
+}
+
+.c-uhff-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 64px;
+}
+
+.c-heading-4 {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(70, 70, 70);
+}
+
+.c-uhff-base .c-list.f-bare {
+    margin-top: 32px;
+    display: flex;
+    gap: 0 32px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-toggle {
+    position: fixed;
+    display: none;
+    right: 24px;
+    cursor: pointer;
+}
+
+.nav-toggle ion-icon {
+    width: 25px;
+    height: 25px;
+    color: rgb(150, 150, 150)
+}
+
+@media(max-width: 1300px) {
+    .home {
+        padding-left: 72px;
+    }
+
+    .home .image img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .home h1 {
+        line-height: 72px;
+        font-size: 72px;
+    }
+
+    .home .content p {
+        font-size: 14px;
+    }
+
+    .semantic-bg {
+        font-size: 16px;
+    }
+
+    .semantic-bg .card-content p {
+        font-size: 12px;
+    }
+
+    .banner-image img {
+        width: 250px;
+        height: 350px;
+    }
+
+    .banner-content h2 {
+        font-size: 18px;
+    }
+
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner-content p {
+        font-size: 14px;
+    }
+
+    .banner-content ul li {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .banner-content ul li ion-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-pengguna {
+        font-size: 18px;
+    }
+
+    .card-pengguna .header-card {
+        font-size: 24px;
+    }
+
+    .card-pengguna .header-card ion-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-pengguna .content-pengguna p {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-comp {
+        right: 64px;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    nav.on .comp-logo img {
+        position: fixed;
+        top: 28px;
+        left: 32px;
+        z-index: 10000;
+    }
+
+    nav.on .nav-link {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        width: 275px;
+        height: 100%;
+        padding: 24px;
+        padding-top: 72px;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+        gap: 0;
+    }
+
+    nav.on .nav-link a {
+        padding: 16px;
+        border-bottom: 1px solid rgb(225, 225, 225);
+    }
+
+    nav.on .nav-comp {
+        position: fixed;
+        left: 24px;
+        top: 300px;
+    }
+
+    nav.on .nav-comp .btn {
+        font-size: 12px;
+    }
+
+    nav.on .nav-toggle {
+        position: fixed;
+        top: 28px;
+        left: 235px;
+    }
+
+    .navbar-extra {
+        z-index: 100;
+    }
+
+    .banner {
+        padding-top: 48px;
+        margin-bottom: 100px;
+        height: max-content;
+        flex-direction: column;
+    }
+
+    .banner-content {
+        order: 2;
+    }
+
+    .banner-image {
+        order: 1;
+    }
+
+    .header-pengguna {
+        font-size: 14px;
+    }
+
+    .card-pengguna .header-card {
+        font-size: 20px;
+    }
+
+    .card-pengguna .header-card ion-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-pengguna .content-pengguna p {
+        font-size: 16px;
+    }
+
+    .result-col h1 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 850px) {
+    .home {
+        margin-top: 100px;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 64px;
+    }
+
+    .home .image {
+        order: 1;
+    }
+
+    .home .content {
+        order: 2;
+    }
+
+    .home .image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .home h1 {
+        font-size: 54px;
+        line-height: 54px;
+    }
+
+    .semantic-bg {
+        font-size: 14px;
+    }
+
+    .banner-image img {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media(max-width: 700px) {
+    .home {
+        padding-left: 32px;
+    }
+
+    .semantic-bg .card-container {
+        justify-content: center;
+        transform: translateY(48px) translateX(0);
+    }
+
+    .change-theme-wrapper {
+        padding-left: 24px;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+@media(max-width: 650px) {
+    nav {
+        padding-left: 24px;
+    }
+
+    .nav-comp {
+        display: none;
+    }
+
+    .navbar-extra {
+        display: none;
+    }
+
+    .home {
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: 32px;
+    }
+
+    .home h1 {
+        font-size: 48px;
+    }
+
+    .home .content p {
+        margin-top: 16px;
+        font-size: 14px;
+    }
+
+    .home .content-footer span {
+        font-size: 12px;
+    }
+
+    .semantic-bg {
+        font-size: 12px;
+    }
+
+    .semantic-bg {
+        padding: 18px 24px;
+    }
+
+    .banner-content h1 {
+        font-size: 24px;
+    }
+
+    .banner-content p,
+    .banner-content ul li {
+        font-size: 12px;
+    }
+
+    .pengguna {
+        padding: 48px;
+    }
+
+    .header-pengguna {
+        font-size: 12px;
+    }
+
+    .semantic-bg {
+        width: 95%;
+    }
+
+    .banner {
+        width: 95%;
+    }
+
+    .banner-content {
+        padding: 24px;
+    }
+
+    .banner-image img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .page.pengguna {
+        padding: 24px;
+    }
+
+    .uhf {
+        padding: 32px;
+    }
+
+    .nav-label img {
+        width: 100px;
+        height: 20px;
+    }
+
+    .product-label {
+        font-size: 16px;
+    }
+
+    .change-theme-wrapper div:first-child {
+        width: 100%;
+    }
+
+    .calendar {
+        margin-top: 150px;
+    }
+
+    .change-theme-wrapper {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 358px) {
+    .calendar {
+        margin-top: 175px;
+    }
+}
+
+@media(max-width: 350px) {
+    .page.pengguna {
+        padding: 8px;
+    }
+}
