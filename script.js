@@ -21,12 +21,12 @@ document.addEventListener(
         e.preventDefault();
     }
 )
-
 const nav = document.querySelector('nav');
 const navToggleBtn = document.querySelector('.nav-toggle');
-if (nav != undefined && navToggleBtn != undefined) {
+if (navToggleBtn != undefined) {
     navToggleBtn.addEventListener(
         'click', function () {
+            const nav = document.querySelector('nav');
             nav.classList.toggle('on');
             if (nav.classList.contains('on')) {
                 navToggleBtn.innerHTML = '<ion-icon name="close-sharp"></ion-icon>';
